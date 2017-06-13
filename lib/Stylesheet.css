@@ -1,13 +1,52 @@
+*{
+	font-family: Helvetica;
+}
+
 #Header{
 	background: rgb(0, 107, 196);
-	margin-top: -5%;
-	margin-left: -5%;
-	margin-right: -5%;
-	height: 30%;
+	margin-top: -1em;
+	margin-left: -1em;
+	margin-right: -1em;
+	padding-left: 1em;
+	padding-top: 2em;
+	height: 7em;
 }
 #HeaderTitle{
-	padding: 10%;
-	font-family: Helvetica;
 	text-align: center;
 	color: white;
+	overflow: auto;
+	position: absolute;
+}
+
+#LootTable{
+	float: right;
+	background: #BABABA;
+	margin-top:-1em;
+	margin-right: -1em;
+	width: 50%;
+	height: 40em;
+}
+
+ul{
+	list-style-type:none;
+	overflow:hidden;
+	background: rgb(0, 107, 196);
+	margin-top: -1em;
+	margin-left: -1em;
+	margin-right: -1em;
+}
+li{
+	display: block;
+	text-align: center;
+	padding: 1em;
+	text-decoration: bold;
+	float: left;
+	transition: .25s ease;
+	border-top-left-radius: .2em;
+	border-top-right-radius: .2em;
+	color: white;
+}
+li:hover{
+	color: black;
+	background: white;
 }
