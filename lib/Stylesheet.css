@@ -1,7 +1,13 @@
-#tester {
-	border-radius: 25px;
-    background: #73AD21;
-    padding: 25%; 
-    width: 50%;
-    height: 150px; 
+#Header{
+	background: rgb(0, 107, 196);
+	margin-top: -5%;
+	margin-left: -5%;
+	margin-right: -5%;
+	height: 30%;
+}
+#HeaderTitle{
+	padding: 10%;
+	font-family: Helvetica;
+	text-align: center;
+	color: white;
 }
