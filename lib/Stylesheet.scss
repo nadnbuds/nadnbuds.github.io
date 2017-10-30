@@ -20,3 +20,12 @@ body{
 #timerbutton {
     @include corners(5px);
 }
+
+#output {
+    float: left;
+}
+
+#history {
+    float: right;
+    opacity = 0;
+}

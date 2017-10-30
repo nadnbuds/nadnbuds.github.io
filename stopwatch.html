@@ -1,4 +1,5 @@
 ﻿<!Doctype = html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="lib/Stopwatch.js">
 </script>
 <html lang = "en">
@@ -12,19 +13,25 @@
     </head>
     
     <body>
-	<div id="output">
+	<div id="input">
         <div id="timer">
-            <p>
-                <span id="minutes">0</span>:<span id="seconds">00</span>:<span id="tenths">00</span>
-            </p>
+            0:00.00
         </div>
         <div id="location">
-
+            <p>
+                Latitude: <span id="lat">0.0</span> Longitutde: <span id="long">0.0</span>
+            </p>
         </div>
-	</div>
-    <div>
         <button id="timerbutton">
             Start
+        </button>
+	</div>
+    <div id="output">
+        <table id="history">
+
+        </table>
+        <button id="clear">
+            Clear
         </button>
     </div>
     </body>
