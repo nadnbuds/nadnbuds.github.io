@@ -1,3 +1,6 @@
+* {
+  font: helvetica; }
+
 body {
   background-color: #295cad; }
 
@@ -11,7 +14,6 @@ body {
   float: left; }
 
 #history {
-
   float: right; }
 
 /*# sourceMappingURL=Stylesheet.css.map */

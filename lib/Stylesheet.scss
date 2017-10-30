@@ -1,4 +1,5 @@
 $base-color: #295cad;
+$base-font: helvetica;
 
 @mixin transition ($transition) {
     -webkit-transition: all $transition ease-in-out;
@@ -11,6 +12,10 @@ $base-color: #295cad;
     -webkit-border-radius: $radius;
     border-radius: $radius;
     -khtml-border-radius: $radius;
+}
+
+*{
+    font: $base-font;
 }
 
 body{
@@ -27,5 +32,4 @@ body{
 
 #history {
     float: right;
-    opacity = 0;
 }
