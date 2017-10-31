@@ -37,8 +37,6 @@ h2 {
     border-bottom: 1px solid $white;
 }
 
-
-
 tr:not(:last-child) {
     border-bottom: 1px solid $white;
 }
@@ -93,8 +91,8 @@ tr:last-child:after {
     text-decoration: none;
     cursor: pointer;
     font-size: .8em;
-    padding: 18px 5px;
-    width: 180px;
+    padding: 18px 12px;
+    width: 240px;
     margin: auto;
     outline: none;
 
@@ -121,6 +119,6 @@ tr:last-child:after {
 }
 
 #history {
+    margin: 0 auto;
     color: $white;
-    float: right;
 }

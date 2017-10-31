@@ -67,8 +67,8 @@ tr:last-child:after {
   text-decoration: none;
   cursor: pointer;
   font-size: .8em;
-  padding: 18px 5px;
-  width: 180px;
+  padding: 18px 12px;
+  width: 240px;
   margin: auto;
   outline: none; }
   #clear:hover {
@@ -80,7 +80,7 @@ tr:last-child:after {
     color: #295cad; }
 
 #input {
-  margin-top: 75px;
+  margin-top: 70px;
   float: left;
   width: 70%;
   text-align: center;
@@ -92,7 +92,7 @@ tr:last-child:after {
   width: 30%; }
 
 #history {
-  color: #fff;
-  float: right; }
+  margin: 0 auto;
+  color: #fff; }
 
 /*# sourceMappingURL=Stylesheet.css.map */
