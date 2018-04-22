@@ -1,2 +1,2 @@
 # nadnbuds.github.io
-Tools for Loot generation
+Personal Website made to host ongoing projects
