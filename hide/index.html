@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://bootswatch.com/4/superhero/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled Javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Image Icon -->
+    <link rel="icon" href="">		
+    <title>Lorenzo Alamillo</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var Resume   = "resume";
+        var Project1 = "project1";
+        var Project2 = "project2";
+
+        function resume() 
+        {
+            document.getElementsByName(Resume)[0].style["display"]   = "block";
+            document.getElementsByName(Project1)[0].style["display"] = "none";
+            document.getElementsByName(Project2)[0].style["display"] = "none";
+
+            document.location.hash = Resume;
+        };
+
+        function project1()
+        {
+            document.getElementsByName(Resume)[0].style["display"]   = "none";
+            document.getElementsByName(Project1)[0].style["display"] = "block";
+            document.getElementsByName(Project2)[0].style["display"] = "none";
+
+            document.location.hash = Project1;
+        };
+
+        function project2()
+        {
+            document.getElementsByName(Resume)[0].style["display"]   = "none";
+            document.getElementsByName(Project1)[0].style["display"] = "none";
+            document.getElementsByName(Project2)[0].style["display"] = "block";
+
+            document.location.hash = Project2;
+        };
+    </script>
+    <style>
+        .container-fluid{
+            padding-top:70px;
+            padding-bottom: 70px;
+        }
+        .img-circle {
+            border-radius: 50%;
+        }
+        div[name="nav"]{
+            
+        }
+    </style>
+
+<div class=row>
+     <div class="text-center col-md-8" name="resume">
+        <h1>Lorenzo Alamillo</h1>
+        <img src="lib/LorenzoAlamillo.jpg" class="img-circle" />
+        <div class="container-fluid text-center">
+            <h1>Work Experience</h1>
+            <div class="container">
+                <b>
+                    Research Assistant Programmer, University of California Riverside Brain Game Center
+                </b>
+                <br>
+                <p>
+                    Riverside, CA August 2017 - Present
+                </p>
+                <ul>
+                    Blank
+                </ul>
+            </div>
+            <h1>Education</h1>      
+        </div>
+    </div>
+
+    <div class="text-center col-md-8" name="project1">
+        <h1>
+            Napse
+        </h1>
+        <h3>
+        </h3>
+    </div>
+
+    <div class="text-center col-md-8" name="project2">
+        <h1>
+            Python Web Scraper
+        </h1>
+        <h1>
+            Scheduled Webpage Downloader
+        </h1>
+        <h1>
+            Gameplaying Bot
+        </h1>
+    </div>
+
+    <div class="col-md-4 card mb3" name="nav">
+        <h1>Info</h1>
+        <h3>
+            <element onclick="resume()">Resume</element>
+        </h3>
+        <h1>Projects</h1>
+        <h3>
+            <element onclick="project1()">Unity Projects</element>
+        </h3>
+        <h3>
+            <element onclick="project2()">Python Projects</element>
+        </h3>
+        <h3>
+            <element onclick="">Coding Challenges</element>
+        </h3>
+        <h3>
+            Rimworld Mod
+        </h3>
+    </div>
+</div>
+
+<!--
+<footer class="jumbotron text-center fixed-bottom" style="margin-bottom: 0px">
+    <h1>What is this webpage?</h1>
+    <p>This is a personal project made to host other personal projects</p>
+    <a href="" class="btn btn-warning">Find out more</a>
+</footer>
+-->
+
+<script>
+    if(document.location.hash === project1) {
+        project1();
+    } 
+    else if(document.location.hash === project2) {
+        project2();
+    } 
+    else {
+        resume();
+    }
+</script>
+</body>
+</html>

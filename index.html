@@ -1,143 +1,40 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Bootstrap CSS -->
-    <link href="https://bootswatch.com/4/superhero/bootstrap.min.css" rel="stylesheet">
-    <!-- Latest compiled Javascript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Image Icon -->
-    <link rel="icon" href="">		
-    <title>Lorenzo Alamillo</title>
-</head>
-<body>
-    <script type="text/javascript">
-        var Resume   = "resume";
-        var Project1 = "project1";
-        var Project2 = "project2";
+    <head>
+        <!--Meta tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        function resume() 
-        {
-            document.getElementsByName(Resume)[0].style["display"]   = "block";
-            document.getElementsByName(Project1)[0].style["display"] = "none";
-            document.getElementsByName(Project2)[0].style["display"] = "none";
+        <!--Css-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link rel="stylesheet" href="stylesheet.css">
 
-            document.location.hash = Resume;
-        };
+        <title>BGC Parsing WebPage</title>
+    </head>
+    <body>
+        <br/>
+        <div class="container">
+            <center>
+                <h1>
+                    Convert BGC to Json
+                </h1>
+            </center>
 
-        function project1()
-        {
-            document.getElementsByName(Resume)[0].style["display"]   = "none";
-            document.getElementsByName(Project1)[0].style["display"] = "block";
-            document.getElementsByName(Project2)[0].style["display"] = "none";
-
-            document.location.hash = Project1;
-        };
-
-        function project2()
-        {
-            document.getElementsByName(Resume)[0].style["display"]   = "none";
-            document.getElementsByName(Project1)[0].style["display"] = "none";
-            document.getElementsByName(Project2)[0].style["display"] = "block";
-
-            document.location.hash = Project2;
-        };
-    </script>
-    <style>
-        .container-fluid{
-            padding-top:70px;
-            padding-bottom: 70px;
-        }
-        .img-circle {
-            border-radius: 50%;
-        }
-        div[name="nav"]{
-            
-        }
-    </style>
-
-<div class=row>
-     <div class="text-center col-md-8" name="resume">
-        <h1>Lorenzo Alamillo</h1>
-        <img src="lib/LorenzoAlamillo.jpg" class="img-circle" />
-        <div class="container-fluid text-center">
-            <h1>Work Experience</h1>
-            <div class="container">
-                <b>
-                    Research Assistant Programmer, University of California Riverside Brain Game Center
-                </b>
-                <br>
-                <p>
-                    Riverside, CA August 2017 - Present
-                </p>
-                <ul>
-                    Blank
-                </ul>
+            <div class="form-group">
+                <textarea class="form-control" id="textinput" rows="20"></textarea>
             </div>
-            <h1>Education</h1>      
-        </div>
-    </div>
 
-    <div class="text-center col-md-8" name="project1">
-        <h1>
-            Napse
-        </h1>
-        <h3>
-        </h3>
-    </div>
-
-    <div class="text-center col-md-8" name="project2">
-        <h1>
-            Python Web Scraper
-        </h1>
-        <h1>
-            Scheduled Webpage Downloader
-        </h1>
-        <h1>
-            Gameplaying Bot
-        </h1>
-    </div>
-
-    <div class="col-md-4 card mb3" name="nav">
-        <h1>Info</h1>
-        <h3>
-            <element onclick="resume()">Resume</element>
-        </h3>
-        <h1>Projects</h1>
-        <h3>
-            <element onclick="project1()">Unity Projects</element>
-        </h3>
-        <h3>
-            <element onclick="project2()">Python Projects</element>
-        </h3>
-        <h3>
-            <element onclick="">Coding Challenges</element>
-        </h3>
-        <h3>
-            Rimworld Mod
-        </h3>
-    </div>
-</div>
-
-<!--
-<footer class="jumbotron text-center fixed-bottom" style="margin-bottom: 0px">
-    <h1>What is this webpage?</h1>
-    <p>This is a personal project made to host other personal projects</p>
-    <a href="" class="btn btn-warning">Find out more</a>
-</footer>
--->
-
-<script>
-    if(document.location.hash === project1) {
-        project1();
-    } 
-    else if(document.location.hash === project2) {
-        project2();
-    } 
-    else {
-        resume();
-    }
-</script>
-</body>
+            <center>
+                <button onclick="OnClick()" type="button" class="btn btn-info">Convert</button>
+            </center>
+        </div>        
+    </body>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script src="button.js"></script>
 </html>
